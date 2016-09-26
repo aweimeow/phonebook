@@ -10,12 +10,12 @@ SRCS_common = main.c
 
 phonebook_orig: $(SRCS_common) phonebook_orig.c phonebook_orig.h
 	$(CC) $(CFLAGS_common) $(CFLAGS_orig) \
-		-DIMPL="\"$@.h\"" -o $@ \
+		-DIMPL="\"$@.h\"" -g -o $@ \
 		$(SRCS_common) $@.c
 
 phonebook_opt: $(SRCS_common) phonebook_opt.c phonebook_opt.h
 	$(CC) $(CFLAGS_common) $(CFLAGS_opt) \
-		-DIMPL="\"$@.h\"" -o $@ \
+		-DIMPL="\"$@.h\"" -g -o $@ \
 		$(SRCS_common) $@.c
 
 run_orig: $(EXEC)
